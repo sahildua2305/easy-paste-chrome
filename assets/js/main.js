@@ -1,8 +1,8 @@
 /*
 * @Author: sahildua2305
 * @Date:   2016-05-01 07:26:20
-* @Last Modified by:   sahildua2305
-* @Last Modified time: 2016-05-01 08:18:18
+* @Last Modified by:   Sahil Dua
+* @Last Modified time: 2016-05-02 01:57:47
 */
 
 console.log("before loading");
@@ -36,7 +36,6 @@ $(document).on('ready', function(){
 				console.log("LinkedIn.");
 				chrome.runtime.sendMessage({method: "getKeyValue", key: "linkedin"}, function(response){
 					console.log(response);
-					console.log(response.data);
 				});
 			}
 		}

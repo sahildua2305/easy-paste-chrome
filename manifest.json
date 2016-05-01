@@ -19,5 +19,9 @@
 			"matches": ["*://*/*"],
 			"js": ["assets/js/jquery.js", "assets/js/main.js"]
 		}
+	],
+
+	"permissions": [
+		"storage"
 	]
 }
