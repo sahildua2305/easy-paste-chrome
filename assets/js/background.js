@@ -2,31 +2,9 @@
 * @Author: sahildua2305
 * @Date:   2016-05-01 07:29:02
 * @Last Modified by:   Sahil Dua
-* @Last Modified time: 2016-05-02 21:45:22
+* @Last Modified time: 2016-05-03 02:38:48
 */
 
-
-chrome.runtime.onMessage.addListener(function(request, sender, sendResponse){
-	if(request.method && request.key){
-		if(request.method == "getKeyValue"){
-			var requested_link = localStorage.getItem(request.key);
-			var status = "success";
-			if(typeof requested_link == "object"){
-				status = "fail";
-			}
-			sendResponse({
-				status: status,
-				link: requested_link,
-				type: typeof requested_link
-			});
-		}
-	}
-	else{
-		// snub them
-		sendResponse({});
-		console.log("a");
-	}
-});
 
 var parent = chrome.contextMenus.create({
 				"title": "Paste easy application link here",
@@ -99,7 +77,7 @@ function pasteLink(info, tab){
 	}, function (tabs) {
 		requested_link = localStorage.getItem(requested_key);
 		status = "success";
-		if(typeof requested_link == "object"){
+		if(typeof requested_link == "object" || requested_link == ""){
 			status = "fail";
 		}
 		chrome.tabs.sendMessage(tabs[0].id, {
