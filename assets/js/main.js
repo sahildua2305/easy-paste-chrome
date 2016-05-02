@@ -2,7 +2,7 @@
 * @Author: sahildua2305
 * @Date:   2016-05-01 07:26:20
 * @Last Modified by:   Sahil Dua
-* @Last Modified time: 2016-05-02 21:46:56
+* @Last Modified time: 2016-05-03 01:34:24
 */
 
 
@@ -10,8 +10,36 @@ var element;
 
 document.addEventListener("contextmenu", function(e){
 	console.log(e);
+	console.log(e.target.selectionStart);
 	element = e.target;
 });
+
+function getCaretPosition(field){
+	// initialize
+	var caretPos = 0;
+
+	if('selectionStart' in field){
+		// Standard-compliant browsers
+		caretPos = field.selectionStart;
+	}
+	else if(document.selection){
+		// IE support
+
+		// set focus on the element
+		field.focus();
+
+		// to get cursor position, get empty selection range
+		var sel = document.selection.createRange();
+
+		// move selection start to 0 position
+		sel.moveStart('character', -field.value.length);
+
+		// the caret position is selection length
+		caretPos = sel.text.length;
+	}
+
+	return caretPos;
+}
 
 $(document).on('ready', function(){
 	console.log("loaded");
@@ -20,7 +48,20 @@ $(document).on('ready', function(){
 		console.log(message);
 		console.log(element);
 		if(message.status == "success" && message.type == "string"){
-			element.value = element.value + message.link;
+			var caretPos = getCaretPosition(element);
+			var initialValue = element.value;
+			if(caretPos == initialValue.length){
+				// this means caret is at the end of the string,
+				// so simply append the link
+				element.value = initialValue + message.link;
+			}
+			else{
+				// split the string into 2 parts at the caretPos
+				// and add the link in between
+				var firstPart = initialValue.substr(0, caretPos);
+				var lastPart = initialValue.substr(caretPos);
+				element.value = firstPart + message.link + lastPart;
+			}
 		}
 	});
 
