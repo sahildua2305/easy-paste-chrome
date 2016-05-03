@@ -2,50 +2,69 @@
 * @Author: sahildua2305
 * @Date:   2016-05-01 07:29:02
 * @Last Modified by:   Sahil Dua
-* @Last Modified time: 2016-05-04 03:15:18
+* @Last Modified time: 2016-05-04 03:21:49
 */
 
 
+alert("err");
+
+var linkedin = 0, github = 0, twitter = 0, facebook = 0, personal = 0;
+
 var parent = chrome.contextMenus.create({
-				"title": "Paste easy link here",
-				"contexts": ["editable"],
-				"onclick": pasteLink
-			});
+	"title": "Paste easy link here",
+	"contexts": ["editable"],
+	"onclick": pasteLink
+});
 
-var linkedin = chrome.contextMenus.create({
-				"title": "LinkedIn",
-				"parentId": parent,
-				"contexts": ["editable"],
-				"onclick": pasteLink
-			});
+var linkedin_link = localStorage.getItem("linkedin");
+if(typeof linkedin_link != "object" && linkedin_link != ""){
+	linkedin = chrome.contextMenus.create({
+		"title": "LinkedIn",
+		"parentId": parent,
+		"contexts": ["editable"],
+		"onclick": pasteLink
+	});
+}
 
-var github = chrome.contextMenus.create({
-				"title": "GitHub",
-				"parentId": parent,
-				"contexts": ["editable"],
-				"onclick": pasteLink
-			});
+var github_link = localStorage.getItem("github");
+if(typeof github_link != "object" && github_link != ""){
+	github = chrome.contextMenus.create({
+		"title": "GitHub",
+		"parentId": parent,
+		"contexts": ["editable"],
+		"onclick": pasteLink
+	});
+}
 
-var twitter = chrome.contextMenus.create({
-				"title": "Twitter",
-				"parentId": parent,
-				"contexts": ["editable"],
-				"onclick": pasteLink
-			});
+var twitter_link = localStorage.getItem("twitter");
+if(typeof twitter_link != "object" && twitter_link != ""){
+	twitter = chrome.contextMenus.create({
+		"title": "Twitter",
+		"parentId": parent,
+		"contexts": ["editable"],
+		"onclick": pasteLink
+	});
+}
 
-var facebook = chrome.contextMenus.create({
-				"title": "Facebook",
-				"parentId": parent,
-				"contexts": ["editable"],
-				"onclick": pasteLink
-			});
+var facebook_link = localStorage.getItem("facebook");
+if(typeof facebook_link != "object" && facebook_link != ""){
+	facebook = chrome.contextMenus.create({
+		"title": "Facebook",
+		"parentId": parent,
+		"contexts": ["editable"],
+		"onclick": pasteLink
+	});
+}
 
-var personal = chrome.contextMenus.create({
-				"title": "Personal Website",
-				"parentId": parent,
-				"contexts": ["editable"],
-				"onclick": pasteLink
-			});
+var personal_link = localStorage.getItem("personal");
+if(typeof personal_link != "object" && personal_link != ""){
+	personal = chrome.contextMenus.create({
+		"title": "Personal Website",
+		"parentId": parent,
+		"contexts": ["editable"],
+		"onclick": pasteLink
+	});
+}
 
 function pasteLink(info, tab){
 	console.log("item " + info.menuItemId + " was clicked");
