@@ -2,7 +2,7 @@
 * @Author: sahildua2305
 * @Date:   2016-05-01 07:29:02
 * @Last Modified by:   Sahil Dua
-* @Last Modified time: 2016-05-04 03:11:12
+* @Last Modified time: 2016-05-04 03:15:18
 */
 
 
@@ -89,15 +89,3 @@ function pasteLink(info, tab){
 		});
 	});
 }
-
-chrome.runtime.onMessage.addListener(function(message, sender, sendMessage){
-	if(message.type == "localStorageUpdated"){
-		// localStorage was updated
-		// Check for all the links, whichever are empty, remove those from the context menu
-		var linkedin_link = localStorage.getItem("linkedin");
-		if(typeof linkedin_link == "object" || linkedin_link == ""){
-			// LinkedIn link isn't set
-			chrome.contextMenus.remove(linkedin);
-		}
-	}
-});
