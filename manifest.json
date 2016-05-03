@@ -1,13 +1,13 @@
 {
 	"manifest_version": 2,
 	
-	"name": "Easy Application",
+	"name": "Easy Paste",
 	"description": "",
 	"version": "1.0.0",
 	
 	"browser_action": {
 		"default_popup": "index.html",
-		"default_title": "Easy Application"
+		"default_title": "Easy Paste"
 	},
 
 	"background": {

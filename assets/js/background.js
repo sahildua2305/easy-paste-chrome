@@ -2,12 +2,12 @@
 * @Author: sahildua2305
 * @Date:   2016-05-01 07:29:02
 * @Last Modified by:   Sahil Dua
-* @Last Modified time: 2016-05-04 02:24:37
+* @Last Modified time: 2016-05-04 02:25:27
 */
 
 
 var parent = chrome.contextMenus.create({
-				"title": "Paste easy application link here",
+				"title": "Paste easy link here",
 				"contexts": ["editable"],
 				"onclick": pasteLink
 			});
