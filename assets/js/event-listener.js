@@ -2,7 +2,7 @@
 * @Author: sahildua2305
 * @Date:   2016-05-02 02:10:18
 * @Last Modified by:   Sahil Dua
-* @Last Modified time: 2016-05-03 02:09:29
+* @Last Modified time: 2016-05-04 03:06:20
 */
 
 $(document).on('ready', function(){
@@ -35,6 +35,11 @@ $(document).on('ready', function(){
 			var newValue = document.getElementById(key).value;
 			localStorage.setItem(key, newValue);
 		}
+
+		// send message to the background.js
+		chrome.runtime.sendMessage({
+			type: "localStorageUpdated"
+		});
 
 		// trigger to show the saved links
 		updateUI();
