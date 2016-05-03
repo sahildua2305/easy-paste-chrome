@@ -2,11 +2,9 @@
 * @Author: sahildua2305
 * @Date:   2016-05-01 07:29:02
 * @Last Modified by:   Sahil Dua
-* @Last Modified time: 2016-05-04 03:21:49
+* @Last Modified time: 2016-05-04 04:19:18
 */
 
-
-alert("err");
 
 var linkedin = 0, github = 0, twitter = 0, facebook = 0, personal = 0;
 
