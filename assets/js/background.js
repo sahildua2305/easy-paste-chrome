@@ -2,7 +2,7 @@
 * @Author: sahildua2305
 * @Date:   2016-05-01 07:29:02
 * @Last Modified by:   Sahil Dua
-* @Last Modified time: 2016-05-08 01:50:08
+* @Last Modified time: 2016-05-08 04:21:43
 */
 
 
@@ -48,9 +48,6 @@ var personal = chrome.contextMenus.create({
 });
 
 function pasteLink(info, tab){
-	console.log("item " + info.menuItemId + " was clicked");
-	console.log("info: " + JSON.stringify(info));
-	console.log("tab: " + JSON.stringify(tab));
 
 	var requested_key, requested_link, status;
 

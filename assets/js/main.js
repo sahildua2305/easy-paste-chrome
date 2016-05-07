@@ -2,14 +2,13 @@
 * @Author: sahildua2305
 * @Date:   2016-05-01 07:26:20
 * @Last Modified by:   Sahil Dua
-* @Last Modified time: 2016-05-03 02:39:40
+* @Last Modified time: 2016-05-08 04:22:07
 */
 
 
 var element;
 
 document.addEventListener("contextmenu", function(e){
-	console.log(e);
 	element = e.target;
 });
 
@@ -66,11 +65,8 @@ function getCaretPosition(field){
 }
 
 $(document).on('ready', function(){
-	console.log("loaded");
 
 	chrome.runtime.onMessage.addListener(function(message, sender, sendResponse) {
-		console.log(message);
-		console.log(element);
 		if(message.status == "success" && message.type == "string"){
 			var caretPos = getCaretPosition(element);
 			var initialValue = element.value;

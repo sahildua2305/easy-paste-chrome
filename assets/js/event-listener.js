@@ -2,7 +2,7 @@
 * @Author: sahildua2305
 * @Date:   2016-05-02 02:10:18
 * @Last Modified by:   Sahil Dua
-* @Last Modified time: 2016-05-08 01:48:51
+* @Last Modified time: 2016-05-08 04:21:16
 */
 
 $(document).on('ready', function(){
@@ -15,9 +15,7 @@ $(document).on('ready', function(){
 	function updateUI(){
 		for(var i in list_keys){
 			var key = list_keys[i];
-			console.log(key);
 			var link = localStorage.getItem(key);
-			console.log(link);
 			if(typeof link == "string"){
 				document.getElementById(key).value = link;
 			}
@@ -28,7 +26,6 @@ $(document).on('ready', function(){
 	}
 
 	$("#save_links").on('click', function(e){
-		console.log("Request for saving links in storage");
 
 		document.getElementById("save_links").innerHTML = "Saving..";
 
