@@ -23,5 +23,10 @@
 
 	"permissions": [
 		"contextMenus"
-	]
+	],
+
+	"icons": {
+		"16": "assets/icons/16x16.png",
+		"48": "assets/icons/48x48.png"
+	}
 }
