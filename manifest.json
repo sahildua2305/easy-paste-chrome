@@ -17,7 +17,7 @@
 	"content_scripts": [
 		{
 			"matches": ["*://*/*"],
-			"js": ["assets/js/jquery.js", "assets/js/main.js"]
+			"js": ["assets/js/jquery.js", "assets/js/content.js"]
 		}
 	],
 
