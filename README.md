@@ -30,6 +30,11 @@ Or manually:
 3. Select the downloaded directory
 
 
+Demo
+-----
+![screengrab-demo-easy-paste](extras/screengrab-demo-easy-paste.gif)
+
+
 Screenshots
 -----------
 
