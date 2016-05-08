@@ -12,6 +12,6 @@ A chrome extension which makes it easy for you to paste your saved profile links
 Installation
 ------------
 
-<a href="https://chrome.google.com/webstore/detail/inbox-by-gmail-checker/mpjmeeikbbgccbjkbfabocnjcaejdpmj" target="_blank">
+<a href="https://chrome.google.com/webstore/detail/easy-paste/kdbifnpknkobjfefmaggbjohangaemid" target="_blank">
   ![Try it now](extras/tryitnowbutton.png "Click here to install from the Chrome Web Store")
 </a>
