@@ -85,3 +85,15 @@ $(document).on('ready', function(){
 		}
 	});
 });
+
+	chrome.runtime.sendMessage({ method: "getLocalStorage", key: "status" }, function(response) {
+	        for (var site in response.data) {
+	            $('input').each(function(index, data) {
+	                if (data.name.toUpperCase().search(site.toUpperCase()) != -1 || data.id.toUpperCase().search(site.toUpperCase()) != -1) {
+	                    if (data.type != 'hidden' && $.inArray(data.type, forbiddenTextAcceptingInputTypes) == -1) {
+	                        $(`[name="${data.name}"]`).val(response.data[site]);
+	                    }
+	                }
+	            });
+	        }
+	    });
