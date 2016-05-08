@@ -6,7 +6,7 @@
   ![Rating on the Chrome Web Store](https://img.shields.io/chrome-web-store/rating/kdbifnpknkobjfefmaggbjohangaemid.svg "Rating on the Chrome Web Store")
 </a>
 
-A chrome extension which makes it easy for you to paste your saved profile links with a couple of clicks.
+A chrome extension to keep all your frequently used profile links just a click away.
 
 This Chrome extension helps you keep all your frequently used profile links handy. It lets you save these links and use them anywhere with just a click.
 
