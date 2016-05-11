@@ -32,7 +32,10 @@ Or manually:
 
 Demo
 -----
+
+####Easy-pasting in form input fields
 ![screengrab-demo-easy-paste](extras/screengrab-demo-easy-paste.gif)
+####Easy-pasting in textarea field
 ![screengrab-demo-easy-paste-textbox](extras/screengrab-demo-easy-paste-textbox.gif)
 
 
