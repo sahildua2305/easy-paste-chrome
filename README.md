@@ -33,6 +33,7 @@ Or manually:
 Demo
 -----
 ![screengrab-demo-easy-paste](extras/screengrab-demo-easy-paste.gif)
+![screengrab-demo-easy-paste-textbox](extras/screengrab-demo-easy-paste-textbox.gif)
 
 
 Screenshots
