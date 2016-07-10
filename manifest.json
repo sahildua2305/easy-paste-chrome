@@ -3,7 +3,7 @@
 	
 	"name": "Easy Paste",
 	"description": "A chrome extension to keep all your frequently used profile links just a click away.",
-	"version": "1.0.1",
+	"version": "1.1.0",
 	
 	"browser_action": {
 		"default_icon": "assets/icons/48x48.png",
