@@ -1,17 +1,15 @@
 /*
 * @Author: sahildua2305
 * @Date:   2016-05-02 02:10:18
-* @Last Modified by:   Sahil Dua
-* @Last Modified time: 2016-05-08 04:21:16
+* @Last Modified by:   Prabhakar Gupta
+* @Last Modified time: 2016-07-11 00:36:38
 */
 
 $(document).on('ready', function(){
 
 	var list_keys = ['linkedin', 'github', 'twitter', 'facebook', 'personal'];
 
-	/**
-	 * updateUI show saved links when popup page is opened by clicking on browser icon
-	 */
+	// updateUI show saved links when popup page is opened by clicking on browser icon
 	function updateUI(){
 		for(var i in list_keys){
 			var key = list_keys[i];
