@@ -2,12 +2,12 @@
 * @Author: sahildua2305
 * @Date:   2016-05-02 02:10:18
 * @Last Modified by:   Prabhakar Gupta
-* @Last Modified time: 2016-07-11 00:36:38
+* @Last Modified time: 2016-07-19 00:27:11
 */
 
 $(document).on('ready', function(){
 
-	var list_keys = ['linkedin', 'github', 'twitter', 'facebook', 'personal'];
+	var list_keys = ['linkedin', 'github', 'twitter', 'facebook', 'personal', 'email'];
 
 	// updateUI show saved links when popup page is opened by clicking on browser icon
 	function updateUI(){
