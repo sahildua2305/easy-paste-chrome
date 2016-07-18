@@ -2,7 +2,7 @@
 * @Author: sahildua2305
 * @Date:   2016-05-02 02:10:18
 * @Last Modified by:   Prabhakar Gupta
-* @Last Modified time: 2016-07-19 00:27:11
+* @Last Modified time: 2016-07-19 00:38:23
 */
 
 $(document).on('ready', function(){
@@ -35,6 +35,9 @@ $(document).on('ready', function(){
 
 		// trigger to show the saved links
 		updateUI();
+
+		$("#success_text").show();
+		$("#success_text").fadeOut(1000);
 
 		document.getElementById("save_links").innerHTML = "Save links";
 	});
