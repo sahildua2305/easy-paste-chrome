@@ -1,8 +1,8 @@
 /*
 * @Author: sahildua2305
 * @Date:   2016-05-01 07:29:02
-* @Last Modified by:   Sahil Dua
-* @Last Modified time: 2016-05-08 04:21:43
+* @Last Modified by:   Prabhakar Gupta
+* @Last Modified time: 2016-07-19 00:29:30
 */
 
 
@@ -47,6 +47,13 @@ var personal = chrome.contextMenus.create({
 	"onclick": pasteLink
 });
 
+var email = chrome.contextMenus.create({
+	"title": "Email Address",
+	"parentId": parent,
+	"contexts": ["editable"],
+	"onclick": pasteLink
+});
+
 function pasteLink(info, tab){
 
 	var requested_key, requested_link, status;
@@ -65,6 +72,9 @@ function pasteLink(info, tab){
 	}
 	else if(info.menuItemId == personal){
 		requested_key = "personal";
+	}
+	else if(info.menuItemId == email){
+		requested_key = "email"
 	}
 
 	//Add all you functional Logic here
