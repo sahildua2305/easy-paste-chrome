@@ -75,7 +75,7 @@ $(document).on('ready', function () {
             var last_part = initialValue.substr(caretPos);
             var selected_text = initialValue.substring(element.selectionStart, element.selectionEnd);
 
-            // if there is not selected text
+            // if there is  selected text
             if (selected_text != '') {
                 last_part = initialValue.substr(caretPos + selected_text.length);
             }
