@@ -71,14 +71,19 @@ $(document).on('ready', function () {
         if (message.status == "success" && message.type == "string") {
             var caretPos = getCaretPosition(element);
             var initialValue = element.value;
+            
             var first_part = initialValue.substr(0, caretPos);
+            
             var last_part = initialValue.substr(caretPos);
+            
             var selected_text = initialValue.substring(element.selectionStart, element.selectionEnd);
 
+            
             // if there is  selected text
             if (selected_text != '') {
                 last_part = initialValue.substr(caretPos + selected_text.length);
             }
+            
             // selected text remove
             element.value = first_part + message.link + last_part;
         }
