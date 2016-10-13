@@ -71,18 +71,16 @@ $(document).on('ready', function(){
 		if(message.status == "success" && message.type == "string"){
 			var caretPos = getCaretPosition(element);
 			var initialValue = element.value;
-			if(caretPos == initialValue.length){
-				// this means caret is at the end of the string,
-				// so simply append the link
-				element.value = initialValue + message.link;
+			var firstPart = initialValue.substr(0,caretPos);
+			var lastPart = initialValue.substr(caretPos);
+			var selectedText = initialValue.substring(element.selectionStart, element.selectionEnd);
+
+			if(selectedText != ''){
+				lastPart = initialValue.substr(caretPos + selectedText.length);
 			}
-			else{
-				// split the string into 2 parts at the caretPos
-				// and add the link in between
-				var firstPart = initialValue.substr(0, caretPos);
-				var lastPart = initialValue.substr(caretPos);
-				element.value = firstPart + message.link + lastPart;
-			}
+
+			element.value = firstPart + message.link + lastPart;
+
 		}
 	});
 
