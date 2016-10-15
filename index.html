@@ -12,57 +12,60 @@
 	<div class="container">
 		<h1 style="margin-top:0"><strong>Easy Paste</strong></h1>
 		<h4><small>Save your profile links once, so that you can paste them with just a couple of clicks whenever you need. <b>You can change the links anytime you want, from this page.</b></small></h4>
-		<div class="form-group">
+		<div id="custom">
+			<div class="form-group">
 			<div class="col-md-8 col-sm-8">
 				<div class="input-group">
 					<div class="input-group-addon"><i class="fa fa-linkedin"></i></div>
 					<input type="text" class="form-control" id="linkedin" placeholder="LinkedIn profile link">
 				</div>
 			</div>
-		</div>
-		<div class="form-group">
-			<div class="col-md-8 col-sm-8">
-				<div class="input-group">
-					<div class="input-group-addon"><i class="fa fa-github-alt"></i></div>
-					<input type="text" class="form-control" id="github" placeholder="GitHub profile link">
+			</div>
+			<div class="form-group">
+				<div class="col-md-8 col-sm-8">
+					<div class="input-group">
+						<div class="input-group-addon"><i class="fa fa-github-alt"></i></div>
+						<input type="text" class="form-control" id="github" placeholder="GitHub profile link">
+					</div>
 				</div>
 			</div>
-		</div>
-		<div class="form-group">
-			<div class="col-md-8 col-sm-8">
-				<div class="input-group">
-					<div class="input-group-addon"><i class="fa fa-twitter"></i></div>
-					<input type="text" class="form-control" id="twitter" placeholder="Twitter profile link">
+			<div class="form-group">
+				<div class="col-md-8 col-sm-8">
+					<div class="input-group">
+						<div class="input-group-addon"><i class="fa fa-twitter"></i></div>
+						<input type="text" class="form-control" id="twitter" placeholder="Twitter profile link">
+					</div>
 				</div>
 			</div>
-		</div>
-		<div class="form-group">
-			<div class="col-md-8 col-sm-8">
-				<div class="input-group">
-					<div class="input-group-addon"><i class="fa fa-facebook-official"></i></div>
-					<input type="text" class="form-control" id="facebook" placeholder="Facebook profile link">
+			<div class="form-group">
+				<div class="col-md-8 col-sm-8">
+					<div class="input-group">
+						<div class="input-group-addon"><i class="fa fa-facebook-official"></i></div>
+						<input type="text" class="form-control" id="facebook" placeholder="Facebook profile link">
+					</div>
 				</div>
 			</div>
-		</div>
-		<div class="form-group">
-			<div class="col-md-8 col-sm-8">
-				<div class="input-group">
-					<div class="input-group-addon"><i class="fa fa-globe"></i></div>
-					<input type="text" class="form-control" id="personal" placeholder="Personal website link">
+			<div class="form-group">
+				<div class="col-md-8 col-sm-8">
+					<div class="input-group">
+						<div class="input-group-addon"><i class="fa fa-globe"></i></div>
+						<input type="text" class="form-control" id="personal" placeholder="Personal website link">
+					</div>
 				</div>
 			</div>
-		</div>
-		<div class="form-group">
-			<div class="col-md-8 col-sm-8">
-				<div class="input-group">
-					<div class="input-group-addon"><i class="fa fa-envelope-o"></i></div>
-					<input type="email" class="form-control" id="email" placeholder="Email ID">
+			<div class="form-group">
+				<div class="col-md-8 col-sm-8">
+					<div class="input-group">
+						<div class="input-group-addon"><i class="fa fa-envelope-o"></i></div>
+						<input type="email" class="form-control" id="email" placeholder="Email ID">
+					</div>
 				</div>
 			</div>
 		</div>
 		<div class="form-group">
 			<div class="col-sm-12">
 				<button class="btn btn-success" id="save_links">Save links</button>
+				<button class="btn btn-success" id="add_link">Add Custom Link</button>
 				<button class="btn btn-danger" id="remove">Remove Data</button>
 				<p class="text-success" id="success_text" hidden><strong>Success!</strong></p>
 				<p class="text-danger" id="remove_text" hidden><strong>Removed!</strong></p>
